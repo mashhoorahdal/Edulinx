@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD DATA </title>
+    <style>label{display:inline-block; width:80px}
+    select,input{width: 120px; margin-right: 30px;}
+    </style>
+    
+</head>
+<body>
+    <select id="Semester">
+        <option value="Semester 1"> Semester 1</option>
+        <option value="Semester 2"> Semester 2</option>
+        <option value="Semester 3"> Semester 3</option>
+        <option value="Semester 4"> Semester 4</option>
+        <option value="Semester 5"> Semester 5</option>
+        <option value="Semester 6"> Semester 6</option>
+        <option value="Semester 7"> Semester 7</option>
+        <option value="Semester 8"> Semester 8</option>
+    </select>
+    <label>Subject Code </label><input id="Subjectcode" type="text"><br><br>
+    <select id="Module">
+        <option value="Module 1"> Module 1</option>
+        <option value="Module 2"> Module 2</option>
+        <option value="Module 3"> Module 3</option>
+        <option value="Module 4"> Module 4</option>
+        <option value="Module 5"> Module 5</option>
+       
+    </select>
+    <label>Pdf link</label><input id="Pdflink" type="text"><br><br> 
+
+    <hr>
+    <button id="Insertbtn">INSERT </button>
+   
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"
+               
+        const firebaseConfig = {
+          apiKey: "AIzaSyCDVjAazT6ylUn-DDhsqiQbaitOkjZpyXM",
+          authDomain: "edulinx-c2b87.firebaseapp.com",
+          projectId: "edulinx-c2b87",
+          storageBucket: "edulinx-c2b87.appspot.com",
+          messagingSenderId: "688215485034",
+          appId: "1:688215485034:web:d119f21336ccb2c0d13813",
+          measurementId: "G-JLDQ3M1F4R"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db= getDatabase();
+//-----------References------------//
+     var sem= document.getElementById('Semester')
+     var subjectcode = document.getElementById("Subjectcode");
+     var module = document.getElementById("Module");
+     var pdflink = document.getElementById("Pdflink");
+
+     var insBtn = document.getElementById("Insertbtn");
+ 
+ //------------INSERT DATA FUNCTION----------//
+ function InsertData() {
+    const semester = sem.value;
+    const moduleCode = module.value;
+    const subjectCode = subjectcode.value;
+    const pdfLink = pdflink.value;
+
+    const dbRef = ref(db, `Materials/${semester}/${moduleCode}`);
+
+    set(dbRef, {
+        Subjectcode: subjectCode,
+        Pdflink: pdfLink
+    }).then(() => {
+        alert("Data stored successfully");
+    }).catch((error) => {
+        alert("Unsuccessful, error: " + error);
+    });
+}
+
+
+//-------------ASSIGN EVENTS TO BTNS----//
+     insBtn.addEventListener('click',InsertData)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
+</body>
+</html>

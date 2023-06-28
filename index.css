@@ -25,6 +25,7 @@ select {
 }
 select:hover{
     background-color: #0f2f44;
+    transition: background-color 2s ease-out 100ms
      }
     
  input{

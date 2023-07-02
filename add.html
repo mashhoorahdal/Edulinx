@@ -5,8 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADD DATA </title>
-    <style>label{display:inline-block; width:80px}
-    select,input{width: 120px; margin-right: 30px;}
+    <style>/* Global Styles */
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Uncut;
+    margin: auto;
+    padding: 20px;
+   
+    color: #1622d4;
+  }
+
+  .dark {
+    background-color: black;
+   
+  }
+  
+  
+  @font-face {
+    font-family: Uncut;
+    src: url(Uncut-Sans-VF.ttf);
+}
+  /* Form Styles */
+  form {
+    background-color: #46668b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #b3e9db88;
+  }
+  
+  label {
+    display: inline-block;
+    width: 80px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+  }
+  
+  select{
+    background-color: #4297cf;
+    font-family: Uncut;
+
+    width: 150px;
+    height: 40px;
+    border:none;
+    margin-right: 20px;
+    padding: 7px;
+    font-size: medium;
+    border-radius: 5px;
+  }
+  input {
+    width: 120px;
+    margin-right: 30px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: Uncut;
+    left:auto;
+    
+
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  hr{
+    color: #4297cf;
+  }
+  
+  /* Hover Animations */
+  input:hover,
+  select:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 480px) {
+    label,
+    select,
+    input {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+
+  
     </style>
     
 </head>

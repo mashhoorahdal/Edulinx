@@ -1,102 +1,141 @@
-
-*{
+* {
     font-family: Uncut;
-    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
 
 @font-face {
     font-family: Uncut;
     src: url(Uncut-Sans-VF.ttf);
 }
 
-
-
 select {
     background-color: #2c6b95;
     color: #fff;
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     height: 40px;
-    border:none;
+    border: none;
     margin-right: 20px;
     padding: 7px;
     font-size: medium;
     border-radius: 5px;
 }
-select:hover{
+
+select:hover {
     background-color: #0f2f44;
-    transition: background-color 2s ease-out 100ms
-     }
-    
- input{
-    width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+input {
+    width: 100%;
+    max-width: 150px;
     padding: 7px;
     font-size: medium;
-    border:1px solid #2c6b95;
+    border: 1px solid #2c6b95;
     margin-right: 20px;
-
     border-radius: 5px;
-    
- }
-   label{
+}
+
+label {
     font-weight: bold;
-    
-   }
-  
-  .select-selected.select-arrow-active:after {
+    margin-bottom: 5px;
+}
+
+.select-selected.select-arrow-active:after {
     top: 7px;
-  }
-  
-  img {
-    width: 30%;
-  }
+}
 
+img {
+    width: 100%;
+    max-width: 30%;
+}
 
-  .fullpage{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
- }
+.fullpage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
- 
-
- .main { 
+.main {
     margin-top: 70px;
-    
- }
+}
 
- button{
-    width: 100px;
+button {
+    width: 100%;
+    max-width: 100px;
     height: 40px;
     font-size: medium;
     border-radius: 5px;
-    border:none;
+    border: none;
     background-color: #2c6b95;
     color: #fff;
-    position: relative;
-    left: 190px;
- }
- button:hover{
-background-color: #0f2f44;
- }
+    margin-top: 10px;
+}
 
- a{
+button:hover {
+    background-color: #0f2f44;
+}
+
+a {
     color: #021e31;
     text-align: center;
-    position: relative;
-    left: 200px;
     font-weight: bold;
-    top: 30px;
-
-
+    margin-top: 30px;
+    display: block;
 }
- a:hover{
-    color: #c40606;
- }
 
- footer{
+a:hover {
+    color: #c40606;
+}
+
+footer {
     position: fixed;
     bottom: 10px;
-    left: 46%;
- }
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    img {
+        max-width: 50%;
+    }
+
+    .main {
+        margin-top: 20px;
+    }
+
+    button {
+        max-width: 150px;
+    }
+
+    a {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    img {
+        max-width: 80%;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    select,
+    input {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    a {
+        margin-top: 10px;
+    }
+}

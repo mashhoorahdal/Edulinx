@@ -11,7 +11,9 @@
 
 
 
+
 select {
+    
     background-color: #2c6b95;
     color: #fff;
     width: 150px;
@@ -21,6 +23,7 @@ select {
     padding: 7px;
     font-size: medium;
     border-radius: 5px;
+    cursor: pointer;
 }
 select:hover{
     background-color: #0f2f44;
@@ -28,7 +31,7 @@ select:hover{
      }
     
  input{
-    width: 150px;
+    width: fit-content;
     padding: 7px;
     font-size: medium;
     border:1px solid #2c6b95;
@@ -37,9 +40,10 @@ select:hover{
     border-radius: 5px;
     
  }
+
    label{
     font-weight: bold;
-    
+    cursor: pointer;
    }
   
   .select-selected.select-arrow-active:after {
@@ -48,6 +52,7 @@ select:hover{
   
   img {
     width: 30%;
+    height: 50%;
   }
 
 
@@ -75,7 +80,9 @@ align-items: center;
     color: #fff;
     position: relative;
     left: 190px;
+    cursor:pointer;
  }
+
  button:hover{
 background-color: #0f2f44;
  }
@@ -94,8 +101,39 @@ background-color: #0f2f44;
     color: #c40606;
  }
 
- footer{
+ footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c6b95;
+    color: #fff;
     position: fixed;
-    bottom: 10px;
-    left: 46%;
- }
+    bottom: 0;
+    left:0;
+    width: 100%;
+}
+
+#LoginBtn{
+left:0;
+}
+#SignOutBtn {
+    position: sticky;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #2c6b95;
+    width: fit-content;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#SignOutBtn:hover {
+    background-color: #0f2f44;
+}
+.hidden {
+    display: none;
+}
+
+#UploadBtn{
+    left:0;
+}

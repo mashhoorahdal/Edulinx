@@ -12,48 +12,54 @@
 
 <body>
     <div class="fullpage">
-    <img src="Edulinx.png">
+        <img src="Edulinx.png">
+        <div class="navbar">
+            <button id="SignOutBtn" class="hidden">Sign Out</button>
+        </div>
+        <div class="main">
+            <button id="LoginBtn">Login with Google</button>
+            <div id="content" style="display: none;">
+                
+                <select id="Semester">
+                    <option value="Semester 1">Semester 1</option>
+                    <option value="Semester 2">Semester 2</option>
+                    <option value="Semester 3">Semester 3</option>
+                    <option value="Semester 4">Semester 4</option>
+                    <option value="Semester 5">Semester 5</option>
+                    <option value="Semester 6">Semester 6</option>
+                    <option value="Semester 7">Semester 7</option>
+                    <option value="Semester 8">Semester 8</option>
+                                </select>
+                <input id="Subjectcode" type="text" placeholder="Enter subject code" list="subjectCodesList">
+                <datalist id="subjectCodesList"></datalist>
+                <br><br>
+                <select id="module">
+                    <option value="Module 1">Module 1</option>
+                    <option value="Module 2">Module 2</option>
+                    <option value="Module 3">Module 3</option>
+                    <option value="Module 4">Module 4</option>
+                    <option value="Module 5">Module 5</option>
+                </select>
+                <br><br>
+                </div>
+                <button id="Selectbtn">Search</button>
+                <p id="Result"><a id="ResultLink" href="" target="_blank"></a></p>
+                
+                <!-- Upload section initially hidden -->
+                <div id="uploadSection" style="display: none;">
+                    <input type="file" id="pdfFile" accept=".pdf">
+                    <button id="UploadBtn">Upload PDF</button>
+                </div>
+            </div>
+        </div>
     
-    <div class="main">
-        
-    <select id="Semester">
-        <option value="Semester 1">Semester 1</option>
-        <option value="Semester 2">Semester 2</option>
-        <option value="Semester 3">Semester 3</option>
-        <option value="Semester 4">Semester 4</option>
-        <option value="Semester 5">Semester 5</option>
-        <option value="Semester 6">Semester 6</option>
-        <option value="Semester 7">Semester 7</option>
-        <option value="Semester 8">Semester 8</option>
-    </select>
-    <input id="Subjectcode" type="text" placeholder="Enter subject code">
-    
-    <select id="module">
-        <option value="Module 1">Module 1</option>
-        <option value="Module 2">Module 2</option>
-        <option value="Module 3">Module 3</option>
-        <option value="Module 4">Module 4</option>
-        <option value="Module 5">Module 5</option>
-
-    </select>
-<br><br>
-    
-    
-    
-    
-    
-
-
-
-    <button id="Selectbtn">Search</button>
-
-    <p id="Result"><a id="ResultLink" href="" target="_blank"></a></p>
-</div>
-
-</div>
-    <a href="add.html">add material</a>
-<footer>Copyright@Edulinx</footer>
     <script src="main.js" type="module"></script>
+</div>
+</div>
+</div>
+
+<footer>Copyright@Edulinx</footer>
+
 </body>
 
 </html>

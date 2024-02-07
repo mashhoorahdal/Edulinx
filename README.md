@@ -27,7 +27,7 @@ Before running the application, ensure you have the following installed/setup:
 
 ## Getting Started
 
-1. Clone this repository to your local machine:    git clone https://github.com/mashhoorahdal/Edulinx.git
+1. Clone this repository to your local machine:    ```git clone https://github.com/mashhoorahdal/Edulinx.git```
 2.  Navigate to the project directory:
 3. Replace the Firebase configuration in the `index.js` file with your own Firebase project configuration details.
 4. Ensure that Firebase Storage rules are properly configured to allow file uploads and downloads.

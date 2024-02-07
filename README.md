@@ -42,7 +42,7 @@ Before running the application, ensure you have the following installed/setup:
 4. Upload a PDF file if needed.
 5. Click on the "Select" button to fetch or download the PDF file associated with the selected semester, module, and subject code.
 
-##Live Preview 
+## Live Preview 
 https://edulincx.vercel.app
 
 
